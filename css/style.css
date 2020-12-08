@@ -72,6 +72,21 @@ img {
 /* ======================КОМПОНЕНТЫ======================== */
 
 /* ======================ШАПКА-САЙТА======================== */
+
+.header-contacts-link-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: #757575;
+}
+
+.header-contacts-link-mail:hover .header-contacts-link-icon,
+.header-contacts-link-mail:focus .header-contacts-link-icon,
+.header-contacts-link-tel:hover .header-contacts-link-icon,
+.header-contacts-link-tel:focus .header-contacts-link-icon {
+  fill: var(--active-link-color);
+}
+
 .header {
   padding: 24px 0 25px;
 }
@@ -191,6 +206,18 @@ img {
 
 /* ======================ПРИНЦИПЫ======================== */
 
+.principles-list-icon-wrapper {
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+.principles-list-icon {
+  width: 70px;
+  height: 70px;
+}
+
 .principles {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -202,13 +229,15 @@ img {
   align-items: center;
 }
 
-.principles-list-item:nth-child(4n) {
+.principles-list-item:nth-child(4n),
+.principles-list-icon-wrapper:nth-child(4n) {
   margin-right: 0;
 }
-.principles-list-item {
+.principles-list-item,
+.principles-list-icon-wrapper {
   margin-right: 30px;
   flex-basis: calc(100% / 4 - 30px);
-  width: 270px;
+  min-width: 270px;
 }
 
 .principles-name {
@@ -283,7 +312,9 @@ img {
   margin-right: 30px;
   flex-basis: calc(100% / 4 - 30px);
   border-radius: 0px 0px 4px 4px;
-  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
 }
 
 .team-list-name {
@@ -302,7 +333,7 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   color: #757575;
 }
 
@@ -317,7 +348,9 @@ img {
 }
 
 .team-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   background-color: #ffffff;
@@ -330,12 +363,6 @@ img {
   fill: #afb1b8;
 }
 
-.team-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .team-link:hover .team-list-icon,
 .team-link:focus .team-list-icon {
   fill: #ffffff;
@@ -346,6 +373,68 @@ img {
   background-color: var(--active-link-color);
 }
 /* ======================КОНЕЦ-КОМАНДЫ======================== */
+
+/* ======================КЛИЕНТЫ============================== */
+
+.clients {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: #212121;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-list-wrapper {
+  min-width: 170px;
+}
+
+.clients-list-item {
+  display: block;
+  list-style: none;
+}
+
+.clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-list-icon {
+  margin: 22px 41px;
+  width: 88px;
+  height: 45px;
+  fill: #afb1b8;
+}
+
+.clients-list-wrapper:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon {
+  fill: var(--active-link-color);
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border-color: var(--active-link-color);
+}
+
+/* ======================КОНЕЦ-КЛИЕНТОВ======================== */
 
 /* ======================КОНЕЦ-ГЕРОЯ======================== */
 
@@ -397,6 +486,57 @@ img {
 
 .footer-hf-logo {
   color: #ffffff;
+}
+
+.footer-subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 12px 0px 20px 156px;
+
+  color: #ffffff;
+}
+
+.footer-contact-wrapper {
+  display: flex;
+}
+
+.footer-address {
+  display: flex;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  min-width: 206px;
+  margin-left: 70px;
+}
+
+.footer-social-list-item {
+  list-style: none;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--active-link-color);
 }
 
 /* ======================КОНЕЦ-ПОДВАЛА======================== */
@@ -495,4 +635,9 @@ img {
   text-decoration: none;
 }
 
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 /* ======================КОНЕЦ-ПОРТФОЛИО======================== */
