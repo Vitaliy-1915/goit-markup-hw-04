@@ -69,6 +69,10 @@ img {
   list-style: none;
 }
 
+.current:visited {
+  color: var(--active-link-color);
+}
+
 /* ======================КОМПОНЕНТЫ======================== */
 
 /* ======================ШАПКА-САЙТА======================== */
@@ -381,8 +385,7 @@ img {
 /* ======================КЛИЕНТЫ============================== */
 
 .clients {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding: 94px 0px;
 }
 
 .clients-title {
@@ -400,10 +403,6 @@ img {
   justify-content: center;
 }
 
-.clients-list-wrapper {
-  min-width: 170px;
-}
-
 .clients-list-item {
   display: block;
   list-style: none;
@@ -415,12 +414,12 @@ img {
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  min-width: 170px;
+  height: 90px;
 }
 
 .clients-list-icon {
   margin: 22px 41px;
-  width: 88px;
-  height: 45px;
   fill: #afb1b8;
 }
 
@@ -607,7 +606,6 @@ img {
   margin-bottom: 30px;
   flex-basis: calc(100% / 3 - 30px);
   background: #ffffff;
-  border: 1px solid #eeeeee;
   width: 370px;
 }
 
@@ -637,10 +635,12 @@ img {
 
 .portfolio-list-link {
   text-decoration: none;
+  display: block;
+  border: 1px solid #eeeeee;
 }
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
